@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riverland Fest 2026 · Valle de la Música, Arriondas</title>
+  <meta name="description" content="Fechas, programa, entradas y cómo llegar al Riverland Fest, festival de música urbana en Arriondas (Asturias).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Riverland Fest, inicio">RIVERLAND<span>FEST</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="menu" class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#programa">Programa</a></li>
+        <li><a href="#entradas">Entradas</a></li>
+        <li><a href="#patrocinadores">Patrocinadores</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <p class="eyebrow">21 · 22 · 23 agosto 2026</p>
+      <h1>RIVER<br>LAND</h1>
+      <p class="hero-sub">Valle de la Música · Arriondas, Asturias</p>
+      <div class="hero-actions">
+        <a class="btn" href="#entradas">Entradas</a>
+        <a class="btn btn-ghost" href="#programa">Ver programa</a>
+      </div>
+    </section>
+
+    <section id="info" class="section reveal">
+      <h2>El festival</h2>
+      <div class="grid-3">
+        <article class="card"><h3>Fechas</h3><p>Del viernes 21 al domingo 23 de agosto de 2026, de 18:00 a 06:30.</p></article>
+        <article class="card"><h3>Lugar</h3><p>El Valle de la Música, N-634 km 340, Arriondas (Asturias).</p></article>
+        <article class="card"><h3>Escenarios</h3><p>El Valle, El Bosque y La Carpa. Música urbana, rap, trap y sonidos alternativos.</p></article>
+      </div>
+      <h3 class="sub">Cómo llegar</h3>
+      <p class="lead">En coche por la N-634, o en bus hasta Gijón y enlace a Arriondas.</p>
+    </section>
+
+    <section id="programa" class="section reveal">
+      <h2>Programa</h2>
+      <div class="tabs" role="tablist" aria-label="Días del festival">
+        <button class="tab is-active" role="tab" id="tab-0" aria-selected="true" aria-controls="panel-0" data-day="0" type="button">Viernes 21</button>
+        <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel-0" data-day="1" type="button" tabindex="-1">Sábado 22</button>
+        <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-0" data-day="2" type="button" tabindex="-1">Domingo 23</button>
+      </div>
+      <ul id="panel-0" class="lineup" role="tabpanel" aria-labelledby="tab-0"></ul>
+      <p class="note">Pulsa un artista para ver más información.</p>
+    </section>
+
+    <section id="entradas" class="section reveal">
+      <h2>Entradas</h2>
+      <p class="note">Precios de ejemplo para el proyecto: sustitúyelos por los reales (atributo data-price).</p>
+      <div class="grid-3">
+        <article class="price-card">
+          <h3>Día suelto</h3>
+          <p class="price"><span data-price="35">35</span> €</p>
+          <ul><li>Un día a elegir</li><li>Acceso a los 3 escenarios</li></ul>
+          <button class="btn buy" type="button" data-ticket="Día suelto" data-price="35">Elegir</button>
+        </article>
+        <article class="price-card featured">
+          <h3>Abono 3 días</h3>
+          <p class="price"><span data-price="80">80</span> €</p>
+          <ul><li>Viernes, sábado y domingo</li><li>Acceso a los 3 escenarios</li></ul>
+          <button class="btn buy" type="button" data-ticket="Abono 3 días" data-price="80">Elegir</button>
+        </article>
+        <article class="price-card">
+          <h3>Abono + camping</h3>
+          <p class="price"><span data-price="105">105</span> €</p>
+          <ul><li>Abono de 3 días</li><li>Zona de acampada</li></ul>
+          <button class="btn buy" type="button" data-ticket="Abono + camping" data-price="105">Elegir</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="patrocinadores" class="section reveal">
+      <h2>Patrocinadores</h2>
+      <ul class="sponsors">
+        <li>Patrocinador 1</li><li>Patrocinador 2</li><li>Patrocinador 3</li><li>Patrocinador 4</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="section reveal">
+      <h2>Contacto</h2>
+      <form id="form" class="form" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="">Elige una opción</option>
+            <option>Entradas</option><option>Camping</option><option>Prensa</option><option>Otro</option>
+          </select>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field check">
+          <input id="privacidad" name="privacidad" type="checkbox">
+          <label for="privacidad">Acepto la política de privacidad</label>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <button class="btn" type="submit">Enviar</button>
+        <p id="form-ok" class="ok" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Riverland Fest · Proyecto académico · Diseño Web Avanzado, UDIT</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <dialog id="modal-artista" class="modal" aria-labelledby="m-artista-titulo">
+    <h2 id="m-artista-titulo"></h2>
+    <p id="m-artista-info"></p>
+    <button class="btn modal-close" type="button">Cerrar</button>
+  </dialog>
+
+  <dialog id="modal-entradas" class="modal" aria-labelledby="m-entradas-titulo">
+    <h2 id="m-entradas-titulo">Tu selección</h2>
+    <p id="m-entradas-tipo"></p>
+    <label for="cantidad">Cantidad</label>
+    <input id="cantidad" type="number" min="1" max="10" value="1">
+    <p class="total">Total: <strong id="m-entradas-total"></strong></p>
+    <a class="btn" href="https://www.riverlandfest.com/" target="_blank" rel="noopener">Ir a la web oficial</a>
+    <button class="btn btn-ghost modal-close" type="button">Cerrar</button>
+  </dialog>
+</body>
+</html>
