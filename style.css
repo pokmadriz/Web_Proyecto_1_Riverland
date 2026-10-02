@@ -1,0 +1,22 @@
+:root {
+  /* Paleta provisional (ver que colores podemos cambiar) */
+  --bg: #0c0c0f;
+  --bg-alt: #16161c;
+  --text: #f4efe6;
+  --muted: #a9a59c;
+  --fire: #ff1fb4;
+  --sun: #790097;
+  --font-display: "Anton", Impact, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --gap: 1.5rem;
+  --radius: 14px;
+  --header-h: 64px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; margin: 0 0 .5em; line-height: 1; }
+h2 { font-size: clamp(2.2rem, 6vw, 3.5rem); color: var(--sun); }
+h3 { font-size: 1.5rem; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
