@@ -97,3 +97,35 @@ function initModales() {
   }));
   cantidad.addEventListener("input", calcular);
 }
+
+/* Validación del formulario */
+function initForm() {
+  const form = document.getElementById("form");
+  const reglas = {
+    nombre: v => v.trim().length < 2 ? "Escribe tu nombre (mínimo 2 caracteres)." : "",
+    email: v => !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? "Introduce un email válido." : "",
+    asunto: v => !v ? "Elige un asunto." : "",
+    mensaje: v => v.trim().length < 10 ? "El mensaje debe tener al menos 10 caracteres." : "",
+    privacidad: (v, el) => !el.checked ? "Debes aceptar la política de privacidad." : ""
+  };
+  const validar = el => {
+    const campo = el.closest(".field");
+    const msg = reglas[el.name](el.value, el);
+    campo.classList.toggle("invalid", Boolean(msg));
+    el.setAttribute("aria-invalid", String(Boolean(msg)));
+    campo.querySelector(".error").textContent = msg;
+    return !msg;
+  };
+  const campos = [...form.querySelectorAll("[name]")];
+  campos.forEach(el => {
+    el.addEventListener("blur", () => validar(el));
+    el.addEventListener("input", () => { if (el.closest(".invalid")) validar(el); });
+  });
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const ok = campos.map(validar).every(Boolean);
+    const aviso = document.getElementById("form-ok");
+    if (ok) { aviso.textContent = "¡Gracias! Hemos recibido tu mensaje."; form.reset(); }
+    else { aviso.textContent = ""; form.querySelector(".invalid input, .invalid select, .invalid textarea").focus(); }
+  });
+}
