@@ -98,6 +98,10 @@ function initModales() {
   cantidad.addEventListener("input", calcular);
 }
 
+
+
+
+
 /* Validación del formulario */
 function initForm() {
   const form = document.getElementById("form");
@@ -128,4 +132,20 @@ function initForm() {
     if (ok) { aviso.textContent = "¡Gracias! Hemos recibido tu mensaje."; form.reset(); }
     else { aviso.textContent = ""; form.querySelector(".invalid input, .invalid select, .invalid textarea").focus(); }
   });
+}
+
+
+
+
+
+
+
+/* Aparición de secciones al hacer scroll */
+function initReveal() {
+  const items = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { items.forEach(i => i.classList.add("is-visible")); return; }
+  const obs = new IntersectionObserver(entradas => entradas.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add("is-visible"); obs.unobserve(en.target); }
+  }), { threshold: 0.12 });
+  items.forEach(i => obs.observe(i));
 }
