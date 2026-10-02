@@ -12,6 +12,7 @@
   --radius: 14px;
   --header-h: 64px;
 }
+
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; }
@@ -34,3 +35,15 @@ a { color: inherit; }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+/* Hero */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--header-h) + 2rem) 1.25rem 3rem; background: radial-gradient(circle at 80% 90%, rgba(255,75,31,.55), transparent 55%), radial-gradient(circle at 10% 20%, rgba(255,194,51,.18), transparent 45%), var(--bg); }
+.hero h1 { font-size: clamp(5rem, 24vw, 15rem); margin: .1em 0; }
+.eyebrow { color: var(--sun); font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin: 0; }
+.hero-sub { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.5rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* Botones */
+.btn { display: inline-block; padding: .85rem 1.75rem; border: 2px solid var(--fire); border-radius: 999px; background: var(--fire); color: var(--text); font: 700 1rem var(--font-body); text-transform: uppercase; letter-spacing: .06em; text-decoration: none; cursor: pointer; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); background: #ff6a42; }
+.btn-ghost { background: transparent; }
+.btn-ghost:hover { background: rgba(255,75,31,.15); }
